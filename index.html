@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Fixed Size Chart</title>
+  </head>
+  <body>
+    <canvas id="lineChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("lineChart").getContext("2d");
+
+      const lineChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar"],
+          datasets: [
+            {
+              label: "Visitors",
+              data: [100, 200, 150],
+              borderColor: "blue",
+              tension: 0.3,
+            },
+          ],
+        },
+        options: {
+          responsive: false, // important: disables auto-resizing
+        },
+      });
+    </script>
+  </body>
+</html>
