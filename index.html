@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const ctx = document.getElementById("lineChart").getContext("2d");
-
       const lineChart = new Chart(ctx, {
         type: "line",
         data: {
@@ -20,7 +19,19 @@
               label: "Expenditure",
               data: [100, 200, 150, 1000, 0],
               borderColor: "rebeccapurple",
-              tension: 0.9,
+              tension: 0.3,
+            },
+            {
+              label: "Savings",
+              data: [300, 250, 400, 500, 600],
+              borderColor: "seagreen",
+              tension: 0.3,
+            },
+            {
+              label: "Total",
+              data: [400, 450, 550, 1500, 600],
+              borderColor: "tomato",
+              tension: 0.3,
             },
           ],
         },
