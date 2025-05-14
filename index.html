@@ -46,7 +46,22 @@
           ],
         },
         options: {
-          responsive: false, // important: disables auto-resizing
+          responsive: false,
+          plugins: {
+            tooltip: {
+              enabled: true,
+              backgroundColor: "purple",
+              titleColor: "rgb(116, 214, 116)",
+              bodyColor: "White",
+              borderColor: "#9f9f9f",
+              borderWidth: 3,
+              callbacks: {
+                label: function (context) {
+                  return `${context.dataset.label}: ₹${context.formattedValue}`;
+                },
+              },
+            },
+          },
         },
       });
     </script>
