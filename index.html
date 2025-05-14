@@ -20,29 +20,24 @@
               data: [100, 200, 150, 1000, 0],
               borderColor: "rebeccapurple",
               tension: 0.3,
-              // point
               pointRadius: 3,
               pointBackgroundColor: "rgb(200, 168, 231)",
               pointBorderColor: "black",
               pointHoverRadius: 8,
-              // Line color
               borderWidth: 3,
               borderDash: [5, 0],
               backgroundColor: "rgba(102, 51, 153, 0.2)",
               fill: true,
             },
-
             {
               label: "Savings",
               data: [300, 250, 400, 500, 600],
               borderColor: "seagreen",
               tension: 0.3,
-              // point
               pointRadius: 3,
               pointBackgroundColor: "rgb(143, 206, 170)",
               pointBorderColor: "black",
               pointHoverRadius: 8,
-              // Line color
               borderWidth: 3,
               borderDash: [5, 0],
               backgroundColor: "rgba(14, 160, 77, 0.2)",
@@ -53,12 +48,10 @@
               data: [400, 450, 550, 1500, 600],
               borderColor: "tomato",
               tension: 0.3,
-              // point
               pointRadius: 3,
               pointBackgroundColor: "rgb(226, 167, 157)",
               pointBorderColor: "black",
               pointHoverRadius: 8,
-              // Line color
               borderWidth: 3,
               borderDash: [5, 0],
               backgroundColor: "rgba(189, 40, 14, 0.2)",
@@ -67,7 +60,24 @@
           ],
         },
         options: {
-          responsive: false, // important: disables auto-resizing
+          responsive: false,
+          plugins: {
+            legend: {
+              display: true, // Show legend
+              position: "top", // top, bottom, left, right
+              labels: {
+                color: "black", // Legend text color
+                font: {
+                  size: 14,
+                  family: "Arial",
+                  weight: "bold",
+                },
+                boxWidth: 20,
+                boxHeight: 10,
+                padding: 20, // space between legends
+              },
+            },
+          },
         },
       });
     </script>
